@@ -10,6 +10,7 @@
 #include <vector>
 #include "Statistics Functions.hpp"
 
+// For vectors
 double calculateSampleMean (const std::vector<int> &sample)
 {
     double total = 0;
@@ -38,6 +39,8 @@ double calculateSampleVariance (const std::vector<int> &sample)
     return sampleVariance;
 }
 
+// For arrays (might not be the most performant wayt to do this,
+// but it keeps code maintenance simple
 double calculateSampleMean (const int sample[], const int &size)
 {
     return calculateSampleMean (std::vector<int> (sample, sample + size));
