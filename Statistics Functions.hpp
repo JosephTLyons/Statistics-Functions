@@ -19,7 +19,4 @@ double calculateSampleMean (const int sample[], const int &size);
 double calculateSampleStandardDeviation (const int sample[], const int &size);
 double calculateSampleVariance (const int sample[], const int &size);
 
-// Controlling error
-//double controlError
-
 #endif /* Statistics_Functions_hpp */
