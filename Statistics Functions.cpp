@@ -39,7 +39,8 @@ double calculateSampleVariance (const std::vector<int> &sample)
     return sampleVariance;
 }
 
-// For arrays (might not be the most performant wayt to do this,
+// For arrays
+// This might not be the most performant wayt to do this,
 // but it keeps code maintenance simple
 double calculateSampleMean (const int sample[], const int &size)
 {
