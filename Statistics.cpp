@@ -56,7 +56,7 @@ Statistics::Statistics (const int inputSample[], const int &inputSize)
 
 void Statistics::printOneVariableStatistics() const
 {
-    std::cout << "One Variable Statistics:" << std::endl;
+    std::cout << "One Variable Statistics:" << std::endl << std::endl;
     std::cout << "Sample Mean: " << sampleMean << std::endl;
     std::cout << "Sample Summation: " << sampleSum << std::endl;
     std::cout << "Sample Standard Deviation: " << sampleStandardDeviation << std::endl;
@@ -68,7 +68,7 @@ long unsigned int Statistics::getSamplesize() const
     return sampleSize;
 }
 
-int Statistics::getSum() const
+int Statistics::getSampleSum() const
 {
     return sampleSum;
 }

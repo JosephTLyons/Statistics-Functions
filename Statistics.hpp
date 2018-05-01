@@ -33,7 +33,7 @@ public:
     void printOneVariableStatistics() const;
     
     long unsigned int getSamplesize() const;
-    int getSum() const;
+    int getSampleSum() const;
     double getSampleMean() const;
     double getSampleStandardDeviation() const;
     double getSampleVariance() const;
