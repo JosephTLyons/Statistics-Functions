@@ -37,7 +37,7 @@ void StatisticsHelper::init()
 {
     sampleSize = sample.size();
     sampleSum = calculateSampleSum();
-    sampleMean = sampleSum / (double) sample.size();
+    sampleMean = sampleSum / (double) sampleSize;
     sampleVariance = calculateSampleVariance();
     sampleStandardDeviation = sqrt (sampleVariance);
 }
