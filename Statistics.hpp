@@ -18,13 +18,13 @@ private:
     std::vector<int> sample;
     
     long unsigned int sampleSize;
-    int sum;
+    int sampleSum;
     double sampleMean;
     double sampleStandardDeviation;
     double sampleVariance;
     
     void init();
-    int calculateSummation() const;
+    int calculateSampleSum() const;
     double calculateSampleVariance() const;
 public:
     Statistics (const std::vector<int> &inputSample);

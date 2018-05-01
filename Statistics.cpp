@@ -11,7 +11,7 @@
 #include <iostream>
 #include <vector>
 
-int Statistics::calculateSummation() const
+int Statistics::calculateSampleSum() const
 {
     int total = 0;
     
@@ -36,8 +36,8 @@ double Statistics::calculateSampleVariance() const
 void Statistics::init()
 {
     sampleSize = sample.size();
-    sum = calculateSummation();
-    sampleMean = sum / (double) sample.size();
+    sampleSum = calculateSampleSum();
+    sampleMean = sampleSum / (double) sample.size();
     sampleVariance = calculateSampleVariance();
     sampleStandardDeviation = sqrt (sampleVariance);
 }
@@ -56,9 +56,10 @@ Statistics::Statistics (const int inputSample[], const int &inputSize)
 
 void Statistics::printOneVariableStatistics() const
 {
+    std::cout << "One Variable Statistics:" << std::endl;
     std::cout << "Sample Mean: " << sampleMean << std::endl;
-    std::cout << "Summation: " << sum << std::endl;
-    std::cout << "Standard Deviation: " << sampleStandardDeviation << std::endl;
+    std::cout << "Sample Summation: " << sampleSum << std::endl;
+    std::cout << "Sample Standard Deviation: " << sampleStandardDeviation << std::endl;
     std::cout << "Sample Size: " << sampleSize << std::endl << std::endl;
 }
 
@@ -69,7 +70,7 @@ long unsigned int Statistics::getSamplesize() const
 
 int Statistics::getSum() const
 {
-    return sum;
+    return sampleSum;
 }
 
 double Statistics::getSampleMean() const
