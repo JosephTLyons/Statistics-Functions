@@ -12,7 +12,7 @@
 #include <iostream>
 #include <vector>
 
-class Statistics
+class StatisticsHelper
 {
 private:
     std::vector<int> sample;
@@ -27,8 +27,8 @@ private:
     int calculateSampleSum() const;
     double calculateSampleVariance() const;
 public:
-    Statistics (const std::vector<int> &inputSample);
-    Statistics (const int sample[], const int &size);
+    StatisticsHelper (const std::vector<int> &inputSample);
+    StatisticsHelper (const int sample[], const int &size);
     
     void printOneVariableStatistics() const;
     

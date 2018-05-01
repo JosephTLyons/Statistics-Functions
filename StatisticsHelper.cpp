@@ -6,12 +6,12 @@
 //  Copyright © 2018 Joseph Lyons. All rights reserved.
 //
 
-#include "Statistics.hpp"
+#include "StatisticsHelper.hpp"
 #include <math.h>
 #include <iostream>
 #include <vector>
 
-int Statistics::calculateSampleSum() const
+int StatisticsHelper::calculateSampleSum() const
 {
     int total = 0;
     
@@ -21,7 +21,7 @@ int Statistics::calculateSampleSum() const
     return total;
 }
 
-double Statistics::calculateSampleVariance() const
+double StatisticsHelper::calculateSampleVariance() const
 {
     double sampleVariance = 0;
     
@@ -33,7 +33,7 @@ double Statistics::calculateSampleVariance() const
     return sampleVariance;
 }
 
-void Statistics::init()
+void StatisticsHelper::init()
 {
     sampleSize = sample.size();
     sampleSum = calculateSampleSum();
@@ -42,19 +42,19 @@ void Statistics::init()
     sampleStandardDeviation = sqrt (sampleVariance);
 }
 
-Statistics::Statistics (const std::vector<int> &inputSample)
+StatisticsHelper::StatisticsHelper (const std::vector<int> &inputSample)
 {
     sample = inputSample;
     init();
 }
 
-Statistics::Statistics (const int inputSample[], const int &inputSize)
+StatisticsHelper::StatisticsHelper (const int inputSample[], const int &inputSize)
 {
     sample = std::vector<int> (inputSample, inputSample + inputSize);
     init();
 }
 
-void Statistics::printOneVariableStatistics() const
+void StatisticsHelper::printOneVariableStatistics() const
 {
     std::cout << "One Variable Statistics:" << std::endl << std::endl;
     std::cout << "Sample Mean: " << sampleMean << std::endl;
@@ -63,27 +63,27 @@ void Statistics::printOneVariableStatistics() const
     std::cout << "Sample Size: " << sampleSize << std::endl << std::endl;
 }
 
-long unsigned int Statistics::getSamplesize() const
+long unsigned int StatisticsHelper::getSamplesize() const
 {
     return sampleSize;
 }
 
-int Statistics::getSampleSum() const
+int StatisticsHelper::getSampleSum() const
 {
     return sampleSum;
 }
 
-double Statistics::getSampleMean() const
+double StatisticsHelper::getSampleMean() const
 {
     return sampleMean;
 }
 
-double Statistics::getSampleStandardDeviation() const
+double StatisticsHelper::getSampleStandardDeviation() const
 {
     return sampleStandardDeviation;
 }
 
-double Statistics::getSampleVariance() const
+double StatisticsHelper::getSampleVariance() const
 {
     return sampleVariance;
 }
