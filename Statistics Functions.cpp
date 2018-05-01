@@ -6,19 +6,34 @@
 //  Copyright © 2018 Joseph Lyons. All rights reserved.
 //
 
+#include <iostream>
 #include <math.h>
 #include <vector>
 #include "Statistics Functions.hpp"
 
 // For vectors
-double calculateSampleMean (const std::vector<int> &sample)
+void printOneVariableStatistics (const std::vector<int> &sample)
 {
-    double total = 0;
+    std::cout << "Sample Mean: " << calculateSampleMean (sample) << std::endl;
+    std::cout << "Summation: " << calculateSummation (sample) << std::endl;
+    std::cout << "Standard Deviation: " << calculateSampleStandardDeviation (sample) << std::endl;
+    std::cout << "n: " << sample.size() << std::endl << std::endl;
+    
+}
+
+double calculateSummation (const std::vector<int> &sample)
+{
+    int total = 0;
     
     for (int i = 0; i < sample.size(); i++)
         total += sample[i];
     
-    return total / sample.size();
+    return total;
+}
+
+double calculateSampleMean (const std::vector<int> &sample)
+{
+    return calculateSummation (sample) / sample.size();
 }
 
 double calculateSampleStandardDeviation (const std::vector<int> &sample)
@@ -42,6 +57,16 @@ double calculateSampleVariance (const std::vector<int> &sample)
 // For arrays
 // This might not be the most performant wayt to do this,
 // but it keeps code maintenance simple
+void printOneVariableStatistics (const int sample[], const int &size)
+{
+    printOneVariableStatistics (std::vector<int> (sample, sample + size));
+}
+
+double calculateSummation (const int sample[], const int &size)
+{
+    return calculateSummation (std::vector<int> (sample, sample + size));
+}
+
 double calculateSampleMean (const int sample[], const int &size)
 {
     return calculateSampleMean (std::vector<int> (sample, sample + size));
