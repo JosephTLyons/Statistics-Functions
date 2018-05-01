@@ -48,9 +48,9 @@ Statistics::Statistics (const std::vector<int> &inputSample)
     init();
 }
 
-Statistics::Statistics (const int sample[], const int &size)
+Statistics::Statistics (const int inputSample[], const int &inputSize)
 {
-    //sample = std::vector<int> (sample, sample + size);
+    sample = std::vector<int> (inputSample, inputSample + inputSize);
     init();
 }
 
