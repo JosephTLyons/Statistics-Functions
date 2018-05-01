@@ -18,7 +18,6 @@ void printOneVariableStatistics (const std::vector<int> &sample)
     std::cout << "Summation: " << calculateSummation (sample) << std::endl;
     std::cout << "Standard Deviation: " << calculateSampleStandardDeviation (sample) << std::endl;
     std::cout << "n: " << sample.size() << std::endl << std::endl;
-    
 }
 
 double calculateSummation (const std::vector<int> &sample)
