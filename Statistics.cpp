@@ -11,7 +11,7 @@
 #include <iostream>
 #include <vector>
 
-int Statistics::calculateSummation()
+int Statistics::calculateSummation() const
 {
     int total = 0;
     
@@ -21,7 +21,7 @@ int Statistics::calculateSummation()
     return total;
 }
 
-double Statistics::calculateSampleVariance()
+double Statistics::calculateSampleVariance() const
 {
     double sampleVariance = 0;
     

@@ -24,8 +24,8 @@ private:
     double sampleVariance;
     
     void init();
-    int calculateSummation();
-    double calculateSampleVariance();
+    int calculateSummation() const;
+    double calculateSampleVariance() const;
 public:
     Statistics (const std::vector<int> &inputSample);
     Statistics (const int sample[], const int &size);
