@@ -59,7 +59,7 @@ void Statistics::printOneVariableStatistics() const
     std::cout << "Sample Mean: " << sampleMean << std::endl;
     std::cout << "Summation: " << sum << std::endl;
     std::cout << "Standard Deviation: " << sampleStandardDeviation << std::endl;
-    std::cout << "n: " << sampleSize << std::endl << std::endl;
+    std::cout << "Sample Size: " << sampleSize << std::endl << std::endl;
 }
 
 long unsigned int Statistics::getSamplesize() const
