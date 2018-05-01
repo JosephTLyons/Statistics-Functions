@@ -26,7 +26,7 @@ double Statistics::calculateSampleVariance() const
     double sampleVariance = 0;
     
     for (int i = 0; i < sampleSize; i++)
-        sampleVariance += pow ((sample[i] - sampleSize), 2);
+        sampleVariance += pow ((sample[i] - sampleMean), 2);
     
     sampleVariance = sampleVariance / (double) (sampleSize - 1);
     
