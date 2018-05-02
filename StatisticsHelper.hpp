@@ -26,6 +26,7 @@ private:
     void init();
     int calculateSampleSum() const;
     double calculateSampleVariance() const;
+    
 public:
     StatisticsHelper (const std::vector<int> &inputSample);
     StatisticsHelper (const int sample[], const int &size);
